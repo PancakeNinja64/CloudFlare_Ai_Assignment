@@ -2,10 +2,6 @@
 
 `cf_ai_interview_coach` is a Cloudflare-native mock interview coach that runs an interactive Q&A session and keeps persistent coaching memory across turns. It uses Workers AI for evaluation, an Agent running on a Durable Object for orchestration/state, and a lightweight React client for chat and dashboard controls.
 
-## Demo Screenshot
-
-_Placeholder: add screenshot at `docs/demo.png` after recording a local run._
-
 ## Architecture
 
 - **Workers AI (LLM)**: Uses `env.AI.run` with `@cf/meta/llama-3.3-70b-instruct-fp8-fast` to evaluate answers and generate follow-up interview questions.
