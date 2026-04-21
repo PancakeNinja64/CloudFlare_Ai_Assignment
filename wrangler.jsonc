@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cf_ai_interview_coach",
+  "main": "src/server.ts",
+  "compatibility_date": "2026-04-21",
+  "assets": {
+    "directory": "dist",
+    "binding": "ASSETS"
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "InterviewAgent",
+        "class_name": "InterviewAgent"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["InterviewAgent"]
+    }
+  ]
+}
